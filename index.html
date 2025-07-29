@@ -1,40 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Display</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            overflow: hidden;
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Promotional Email</title>
+    <style type="text/css">
+        /* Reset styles */
+        body, table, td, p, a, li, blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
         }
         
         img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            object-fit: contain;
-            margin-top: 40px;
+            -ms-interpolation-mode: bicubic;
         }
         
-        @media (max-width: 768px) {
-            body {
-                padding: 5px;
+        /* Email styles */
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        
+        .image-container {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            width: 100%;
+            min-height: 500px;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+        
+        /* Mobile responsive */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            
+            .image-container {
+                padding: 15px !important;
+            }
+            
+            .main-image {
+                min-height: 400px !important;
+                max-height: 70vh !important;
+                border-radius: 4px !important;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .image-container {
+                padding: 10px !important;
+            }
+            
+            .main-image {
+                min-height: 350px !important;
+                max-height: 65vh !important;
             }
         }
     </style>
 </head>
 <body>
-    <img src="image.jpg" alt="Real Estate Promotional Image" />
+    <!-- Outer table for email client compatibility -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f0f0f0; height: 100vh;">
+        <tr>
+            <td align="center" valign="middle" style="height: 100vh;">
+                <!-- Main email container -->
+                <table border="0" cellpadding="0" cellspacing="0" class="email-container" style="background-color: #ffffff;">
+                    <tr>
+                        <td class="image-container">
+                            <img src="image.jpg" alt="Real Estate Promotional Image" class="main-image" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
